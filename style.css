@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 150px;
+    border-radius: 100px;
+    
+}
+body {
+    height: 100vh; /* Make sure the body takes up full viewport height */
+    font-family: "Poppins";
+    background-color: black;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    border: none solid black;
+    border-radius: 10px;
+
+    min-width: 700px;
+    padding: 30px; 
+    background-color: rgb(48, 255, 234);
+    box-shadow: 0px 0px 33px 0px rgba(255,255,255,1);
+}
+.main-content{
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-contentHidden{
+    display: none;
+}
+.follow{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+   
+}
+#view{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    top:2vh;
+}
+#fview{
+    position: relative;
+    bottom: 25px;
+}
+form {
+    input{
+        width: 200px;
+        height: 30px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        outline:none;
+    }
+    
+    margin-top: 10px;
+}
+
+#search{
+    border: none;
+    width: 90px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+}
+#view{
+    border: none;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(44, 133, 235);
+    color: white;
+    
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
