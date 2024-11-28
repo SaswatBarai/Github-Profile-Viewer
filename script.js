@@ -1,12 +1,21 @@
 let user = document.getElementById("userID")
 
 async function fetchUser(userID) {
-    let response = await fetch(`https://api.github.com/users/${userID}`)
+    const token = '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';
+    const headers = {
+        Authorization: `token ${token}`
+    };
+    
+    let response = await fetch(`https://api.github.com/users/${userID}`, { headers });
+    if (response.status === 403) {
+        console.error("Rate limit exceeded or forbidden access.");
+        return;
+    }
     let result = await response.json();
     console.log(result);
-   
     displayData(result);
 }
+
 
 
 document.getElementById("search").addEventListener("click", (event) => {
